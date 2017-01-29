@@ -4,14 +4,44 @@
   <head>
     <meta charset="UTF-8">
     <title>Набор для путешествий</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <header class="header-item">
-      <div class="container">
+    <header class="main-header">
+      <div class="container clearfix">
+        <nav class="main-navigation">
+          <ul class="main-nav">
+            <li>
+              <div class="catalog-logo"><img src="img/cataloglogo.png" alt="Логотип Барбершоп"></div>
+            </li>
+            <li>
+              <a href="#">Информация</a>
+            </li>
+            <li>
+              <a href="#">Новости</a>
+            </li>
+            <li>
+              <a href="#">Прайс-лист</a>
+            </li>
+            <li>
+              <a href="#">Магазин</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="user-block">
+          <a class="login" href="#">Вход</a>
+        </div>
+      </div>
+    </header>
+    <div class="catalog-navigation">
+      <div class="container clearfix">
         <h1>Набор для путешествий "Baxter of Сalifornia"</h1>
-        <nav class="item-navigation">
-          <ul>
+        <nav>
+          <ul class="catalog-nav">
             <li>
               <a href="#">Главная</a>
             </li>
@@ -27,13 +57,14 @@
           </ul>
         </nav>
       </div>
-    </header>
-    <main class="container">
+    </div>
+    <main class="container clearfix">
       <div class="item-images">
-        <img src="img/item4.jpg" width="460" height="498" alt="Набор для путешествий">
-        <img src="img/item1.jpg" width="140" height="149" alt="Набор для путешествий">
-        <img src="img/item2.jpg" width="140" height="149" alt="Набор для путешествий">
-        <img src="img/item3.jpg" width="140" height="149" alt="Набор для путешествий">
+        <div class="item-image"></div>
+        <img class="image image-main" src="img/item4.jpg" width="460" height="498" alt="Набор для путешествий">
+        <img class="image image1" src="img/item1.jpg" width="140" height="149" alt="Набор для путешествий">
+        <img class="image image2" src="img/item2.jpg" width="140" height="149" alt="Набор для путешествий">
+        <img class="image image3" src="img/item3.jpg" width="140" height="149" alt="Набор для путешествий">
       </div>
       <div class="description">
         <section class="item-description">
@@ -58,8 +89,8 @@
         </section>
       </div>
     </main>
-    <footer class="container-footer">
-      <div class="container">
+    <footer class="item-footer">
+      <div class="container clearfix">
         <section class="footer-contacts">
           Барбершоп «Бородинский»<br> Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
           <a href="#">Как нас найти?</a><br> Телефон: +7 (812) 666-02-66
