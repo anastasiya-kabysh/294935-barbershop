@@ -4,16 +4,20 @@
   <head>
     <meta charset="UTF-8">
     <title>Набор для путешествий</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <header class="main-header">
+    <header class="main-header catalog">
       <div class="container clearfix">
         <nav class="main-navigation">
-          <ul class="main-nav">
+          <ul>
             <li>
-              <div class="catalog-logo"><img src="img/cataloglogo.png" alt="Логотип Барбершоп"></div>
+              <div class="catalog-logo">
+                <a><img src="img/cataloglogo.png" width="111" height="24" alt="Логотип Барбершоп"></a>
+              </div>
             </li>
             <li>
               <a href="#">Информация</a>
@@ -25,7 +29,7 @@
               <a href="#">Прайс-лист</a>
             </li>
             <li>
-              <a href="#">Магазин</a>
+              <a href="#" class="catalog-opened">Магазин</a>
             </li>
             <li>
               <a href="#">Контакты</a>
@@ -37,56 +41,57 @@
         </div>
       </div>
     </header>
-    <div class="catalog-navigation">
-      <div class="container clearfix">
-        <h1>Набор для путешествий "Baxter of Сalifornia"</h1>
-        <nav>
-          <ul class="catalog-nav">
-            <li>
-              <a href="#">Главная</a>
-            </li>
-            <li>
-              <a href="#">Магазин</a>
-            </li>
-            <li>
-              <a href="#">Средства для ухода</a>
-            </li>
-            <li>
-              <a href="#"><h2>Набор для путешествий "Baxter of Сalifornia"</h2></a>
-            </li>
-          </ul>
-        </nav>
+    <main class="item-main ">
+      <div class="catalog-navigation">
+        <div class="container clearfix">
+          <h1>Набор для путешествий "Baxter of Сalifornia"</h1>
+          <nav>
+            <ul class="catalog-nav">
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">Магазин</a>
+              </li>
+              <li>
+                <a href="#">Средства для ухода</a>
+              </li>
+              <li>
+                <a href="#" class="open-page">Набор для путешествий "Baxter of Сalifornia"</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
-    <main class="container clearfix">
-      <div class="item-images">
-        <div class="item-image"></div>
-        <img class="image image-main" src="img/item4.jpg" width="460" height="498" alt="Набор для путешествий">
-        <img class="image image1" src="img/item1.jpg" width="140" height="149" alt="Набор для путешествий">
-        <img class="image image2" src="img/item2.jpg" width="140" height="149" alt="Набор для путешествий">
-        <img class="image image3" src="img/item3.jpg" width="140" height="149" alt="Набор для путешествий">
-      </div>
-      <div class="description">
-        <section class="item-description">
-          <span class="item-presence">Есть в наличии</span>
-          <span class="item-article">Артикул: Dexter AE</span>
+      <div class="item-article container clearfix">
+        <div class="item-images">
+          <img class="image image-item" src="img/item4.jpg" width="460" height="498" alt="Набор для путешествий">
+          <img class="image image1" src="img/item1.jpg" width="140" height="149" alt="Набор для путешествий">
+          <img class="image image2" src="img/item2.jpg" width="140" height="149" alt="Набор для путешествий">
+          <img class="image image3" src="img/item3.jpg" width="140" height="149" alt="Набор для путешествий">
+        </div>
+        <div class="description ">
+          <section class="item-description clearfix">
+            <span class="item-presence">Есть в наличии</span>
+            <span class="item-article">Артикул: Dexter AE</span>
+          </section>
           <p class="text-description">Travel kit - <a href="#">необходимый аксессуар</a> во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем
             для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
-          <div class="price">
+          <div class="price price-item">
             <b>2 900 руб.</b>
-            <a href="#" class="btn">Купить</a>
+            <a href="#" class="btn btn-item">Купить</a>
           </div>
-        </section>
-        <section class="item-contain">
-          <h3>В набор входят:</h3>
-          <ul>
-            <li>Средство для умывания (50 мл)</li>
-            <li>Увлажняющий крем (50 мл)</li>
-            <li>Крем для бритья</li>
-            <li>Крем после бритья, шампунь (50 мл)</li>
-            <li>Удобная кожаная косметичка</li>
-          </ul>
-        </section>
+          <section class="item-contain">
+            <h3>В набор входят:</h3>
+            <ul class="item-list">
+              <li class="item-piece">Средство для умывания (50 мл)</li>
+              <li class="item-piece">Увлажняющий крем (50 мл)</li>
+              <li class="item-piece">Крем для бритья</li>
+              <li class="item-piece">Крем после бритья, шампунь (50 мл)</li>
+              <li class="item-piece">Удобная кожаная косметичка</li>
+            </ul>
+          </section>
+        </div>
       </div>
     </main>
     <footer class="item-footer">
