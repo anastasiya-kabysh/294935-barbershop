@@ -787,9 +787,6 @@ input[type="radio"]:disabled+label::after {
   font-weight: 700;
 }
 
-
-/*как сделать чтобы все цены одинаковой длины были?*/
-
 .btn.btn-price {
   float: right;
   padding: 15px 20px;
@@ -827,9 +824,6 @@ input[type="radio"]:disabled+label::after {
   font-size: 14px;
 }
 
-
-/*нет нумерации кнопок*/
-
 .pages a:hover, .pages a:active {
   background-color: #663d15;
 }
@@ -837,9 +831,6 @@ input[type="radio"]:disabled+label::after {
 .pages .open-page {
   background-color: #ffffff;
 }
-
-
-/*как этот паддинг у футера убрать?*/
 
 
 /*позиционирование catalog-item.html*/
@@ -933,7 +924,7 @@ input[name="slider"]+.slide:last-child {
   list-style: none;
 }
 .item-piece {
-  padding-left: 20px;
+  padding-left: 30px;
   position: relative;
 }
 .item-piece::before {
@@ -941,9 +932,10 @@ input[name="slider"]+.slide:last-child {
   height: 12px;
   content: "";
   position: absolute;
-  background: url("../img/item5.png") no-repeat;
+  background-color: #000000;
   top: 5px;
   left: 5px;
+  transform: rotate(45deg);
 }
 .item-footer {
   margin-top: 49px;
