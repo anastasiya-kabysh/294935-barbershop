@@ -6,7 +6,7 @@ body {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
-  background: #000000 url("img/body-bg.jpg") no-repeat center top;
+  background: #000000 url("../img/body-bg.jpg") no-repeat center top;
 }
 
 h3 {
@@ -81,8 +81,9 @@ h3 {
   background-color: #000000;
 }
 
-.catalog {
-  margin-bottom: 0;
+.inner-page {
+  color: #000000;
+  background: #f8f3f0 url("../img/pattern-white.jpg") repeat;
 }
 
 .main-navigation {
@@ -115,12 +116,50 @@ h3 {
   background: #242424;
 }
 
-.catalog-opened {
-  box-shadow: 0 10px 0 0 #ffffff;
+.main-navigation .logo-inner {
+  float: left;
+  width: 111px;
+  height: 20px;
+  padding-top: 22px;
 }
 
+.main-navigation .logo-inner img {
+  width: 111px;
+  height: 24px;
+}
 
-/*как нормально ставить ссылки чтобы активная страница отображалась интерфейс окна браузера?...?*/
+.main-navigation .logo-inner:hover {
+  background: none;
+}
+
+.main-navigation .active {
+  position: relative;
+  background-color: none;
+}
+
+.main-navigation .active::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+  width: 100%;
+  background-color: #ffffff;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+  height: 5px;
+  background-color: #ffffff;
+}
+
+.main-navigation .active a:hover {
+  background: none;
+}
+
+.main-navigation .active span {
+  display: block;
+  padding: 25px 20px;
+}
 
 .user-block {
   float: right;
@@ -216,7 +255,7 @@ h3 {
   margin-bottom: 35px;
   padding: 50px 80px;
   color: #000000;
-  background: url("../img/index-content-shadow.png") no-repeat center, #f8f5f2 url("../img/pattern-white.jpg");
+  background: url("../img/shadow.png") no-repeat center, #f8f5f2 url("../img/pattern-white.jpg");
 }
 
 .index-content-left {
@@ -475,73 +514,56 @@ h3 {
 
 /*позиционирование для каталога*/
 
-.catalog-navigation {
-  display: block;
-  padding-top: 55px;
-  padding-bottom: 55px;
-  background-color: #f5f2ef;
-  color: #000000;
+.inner-page-title {
+  margin-bottom: 55px;
 }
 
-.catalog-navigation h1 {
-  margin-bottom: 28px;
+.inner-page-title h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
   font-size: 30px;
   line-height: 42px;
-  font-weight: 700;
 }
 
-.catalog-nav {
+.breadcrumbs {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 0;
 }
 
-.catalog-nav::after {
-  position: absolute;
-  content: "";
-  left: 50%;
-  top: 50%;
-  background-image: url("../img/sprite.png");
-  transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
+.breadcrumbs li {
+  position: relative;
+  display: inline;
+  padding-right: 40px;
 }
 
-.catalog-nav li {
-  display: inline-block;
-  vertical-align: middle;
-  ;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: left;
-}
-
-.catalog-nav a {
-  display: inline-block;
-  padding-right: 30px;
-  vertical-align: middle;
-  text-align: left;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: bold;
-  text-decoration: none;
+.breadcrumbs a {
   color: #000000;
-  outline: 1px solid black;
+  text-decoration: none;
 }
 
-.catalog-nav a::after {
-  width: 11px;
-  height: 12px;
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs .current {
+  color: #aba9a7;
+}
+
+.breadcrumbs li::after {
   content: "";
   position: absolute;
-  background: url("../img/item5.png") no-repeat;
+  top: 4px;
+  right: 18px;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  transform: rotate(45deg);
 }
 
-
-/*и что дальше делать с этими иконками?  не передвигаются нормально, при передвижении исчезают*/
-
-.catalog-nav .open-page, .catalog-nav .open-page:active {
-  color: #acaaa8;
+.breadcrumbs .current::after {
+  display: none;
 }
 
 
@@ -576,16 +598,13 @@ h3 {
   margin-bottom: 50px;
 }
 
-.form-title {
+.form-groups legend {
   padding: 0;
   margin: 0;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   line-height: 30px;
   font-size: 24px;
 }
-
-
-/*почему-то отступы под  обоими заголовками больше чем надо*/
 
 .catalog-filter {
   padding: 0;
@@ -697,7 +716,6 @@ input[type="radio"]:disabled+label::after {
 .catalog-items {
   float: right;
   width: 700px;
-  outline: 1px solid black;
   font-size: 0;
 }
 
@@ -719,7 +737,7 @@ input[type="radio"]:disabled+label::after {
   line-height: 18px;
   font-weight: 700;
   background-color: #ffffff;
-  outline: 1px solid black;
+  box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.2)
 }
 
 .items-and-prices:nth-child(3n) {
@@ -733,6 +751,7 @@ input[type="radio"]:disabled+label::after {
 .item>h2 {
   padding: 0;
   margin: 0;
+  min-height: 45px;
   margin-left: 16px;
   padding-bottom: 16px;
   margin-right: 30px;
@@ -740,9 +759,6 @@ input[type="radio"]:disabled+label::after {
   line-height: 18px;
   text-align: left;
 }
-
-
-/*как сделать, чтобы строчки названия товаров были разной длины?*/
 
 .item a {
   text-decoration: none;
@@ -753,7 +769,7 @@ input[type="radio"]:disabled+label::after {
   display: block;
   margin-left: 16px;
   margin-right: 16px;
-  padding-top: font-size: 14px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 18px;
 }
@@ -763,8 +779,8 @@ input[type="radio"]:disabled+label::after {
 
 .price b {
   float: left;
-  width: 109px;
-  height: 43px;
+  padding: 15px 25px;
+  max-width: 109px;
   text-align: center;
   vertical-align: middle;
   background-color: #e5e5e5;
@@ -772,17 +788,17 @@ input[type="radio"]:disabled+label::after {
 }
 
 
-/*почему вертикальное выравнивание не работает?*/
+/*как сделать чтобы все цены одинаковой длины были?*/
 
-.btn-price {
+.btn.btn-price {
   float: right;
-  width: 78px;
-  height: 43px;
+  padding: 15px 20px;
+  margin-right: 0;
+  max-width: 43px;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   font-family: "PT Sans Narrow", "Arial", sans-serif;
-  vertical-align: middle;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
@@ -796,15 +812,19 @@ input[type="radio"]:disabled+label::after {
   background-color: #663d15;
 }
 
+.pages {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .pages a {
   display: inline-block;
   vertical-align: top;
-  min-width: 43px;
-  min-height: 43px;
-  box-sizing: border-box;
+  padding: 15px 20px;
   margin-right: 7px;
   background-color: #000000;
   color: #ffffff;
+  font-size: 14px;
 }
 
 
@@ -824,18 +844,32 @@ input[type="radio"]:disabled+label::after {
 
 /*позиционирование catalog-item.html*/
 
-.item-images {
-  float: left;
-  width: 460px;
-  font-size: 0;
-  outline: 1px solid black;
-  /*откуда внизу под катринками лишние 15 пикселей?*/
+.slider {
+  font-size: 0
 }
 
-.image-item {
-  display: block;
+.slides {
+  float: left;
+  width: 460px;
+}
+
+.slide {
+  display: none;
+}
+
+input[name="slider"]+.slide {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+input[name="slider"]+.slide:last-child {
+  margin-right: 0;
+}
+
+.slide-big {
   margin-bottom: 21px;
-  margin-right: 90px;
 }
 
 
@@ -853,7 +887,6 @@ input[type="radio"]:disabled+label::after {
 .description {
   float: right;
   padding-top: 25px;
-  outline: 1px solid black;
   max-width: 400px;
   font-size: 14px;
   line-height: 24px;
@@ -914,4 +947,156 @@ input[type="radio"]:disabled+label::after {
 }
 .item-footer {
   margin-top: 49px;
+}
+
+/*модальное окно*/
+.modal-content {
+  display: none;
+  position: absolute;
+  margin-left: -230px;
+  top: 120px;
+  left: 50%;
+  width: 300px;
+  padding: 50px 80px;
+  color: #000000;
+  background: #f8f3f0 url("../img/pattern-white.jpg");
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+.modal-content-close {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 0;
+  right: -34px;
+  font-size: 0;
+  background-color: red;
+  border: 0;
+  cursor: pointer;
+}
+.modal-content-close::before, .modal-content-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: #d0d0d0;
+  border-radius: 1px;
+}
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+.modal-content h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 42px;
+}
+.modal-content p {
+  margin: 0;
+  margin-bottom: 14px;
+}
+.modal-content .login-form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.login-form input[type="text"], .login-form input[type="password"] {
+  width: 241px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  padding-right: 40px;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+}
+.login-form input:focus {
+  border-color: #663d15;
+}
+.login-form input.icon-user {
+  background-image: url("img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 100% -504px;
+}
+.login-form input.icon-password {
+  background-image: url("img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 100% -45px;
+}
+
+/*спрайты не делала пока!*/
+.login-form .restore {
+  float: right;
+  color: #000000;
+}
+.login-form .btn {
+  width: 100%;
+  margin-top: 15px;
+}
+.login-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.login-checkbox:hover {
+  color: #663d15;
+}
+.login-checkbox input[type="checkbox"] {
+  display: none;
+}
+.login-checkbox input[type="checkbox"] {
+  display: none;
+}
+.login-checkbox input[type="checkbox"]+.checkbox-indicator {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #000000;
+}
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before, .login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  width: 15px;
+  height: 2px;
+  background-color: #000000;
+}
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+  transform: rotate(-45deg);
+}
+.modal-content-map {
+  display: none;
+  width: 766px;
+  height: 561px;
+  background: #e9e5dc url("../img/map.jpg");
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -280px;
+  margin-left: -390px;
+  border: 7px solid white;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }

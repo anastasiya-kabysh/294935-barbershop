@@ -9,30 +9,28 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <body>
-    <header class="main-header catalog">
+  <body class="inner-page">
+    <header class="main-header">
       <div class="container clearfix">
         <nav class="main-navigation">
+          <a class="logo-inner" href="index.html">
+            <img src="img/itemlogo.png" width="111" height="24" alt="Барбершоп «Бородинский»">
+          </a>
           <ul>
             <li>
-              <div class="catalog-logo">
-                <a><img src="img/cataloglogo.png" width="111" height="24" alt="Логотип Барбершоп"></a>
-              </div>
+              <a href="index.html">Информация</a>
             </li>
             <li>
-              <a href="#">Информация</a>
+              <a href="index.html">Новости</a>
             </li>
             <li>
-              <a href="#">Новости</a>
+              <a href="catalog-price.html">Прайс-лист</a>
+            </li>
+            <li class="active">
+              <span>Магазин</span>
             </li>
             <li>
-              <a href="#">Прайс-лист</a>
-            </li>
-            <li>
-              <a href="#" class="catalog-opened">Магазин</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
+              <a href="index.html">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -41,56 +39,64 @@
         </div>
       </div>
     </header>
-    <main class="item-main ">
-      <div class="catalog-navigation">
-        <div class="container clearfix">
-          <h1>Набор для путешествий "Baxter of Сalifornia"</h1>
-          <nav>
-            <ul class="catalog-nav">
-              <li>
-                <a href="#">Главная</a>
-              </li>
-              <li>
-                <a href="#">Магазин</a>
-              </li>
-              <li>
-                <a href="#">Средства для ухода</a>
-              </li>
-              <li>
-                <a href="#" class="open-page">Набор для путешествий "Baxter of Сalifornia"</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+    <main class="container clearfix">
+      <div class="inner-page-title">
+        <h1>Набор для путешествий "Baxter of Сalifornia"</h1>
+        <ul class="breadcrumbs">
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="catalog.html">Магазин</a>
+          </li>
+          <li>
+            <a href="catalog.html">Средства для ухода</a>
+          </li>
+          <li class="current">
+            <span>Набор для путешествий "Baxter of Сalifornia"</span>
+          </li>
+        </ul>
       </div>
-      <div class="item-article container clearfix">
-        <div class="item-images">
-          <img class="image image-item" src="img/item4.jpg" width="460" height="498" alt="Набор для путешествий">
-          <img class="image image1" src="img/item1.jpg" width="140" height="149" alt="Набор для путешествий">
-          <img class="image image2" src="img/item2.jpg" width="140" height="149" alt="Набор для путешествий">
-          <img class="image image3" src="img/item3.jpg" width="140" height="149" alt="Набор для путешествий">
-        </div>
-        <div class="description ">
-          <section class="item-description clearfix">
-            <span class="item-presence">Есть в наличии</span>
-            <span class="item-article">Артикул: Dexter AE</span>
-          </section>
-          <p class="text-description">Travel kit - <a href="#">необходимый аксессуар</a> во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем
-            для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
-          <div class="price price-item">
-            <b>2 900 руб.</b>
-            <a href="#" class="btn btn-item">Купить</a>
+      <div class="container clearfix">
+        <div class="slider">
+          <div class="slides">
+            <input type="radio" name="slider" id="slide-1" value="1">
+            <img class="slide slide-big" src="img/slide_1.jpg" width="460" height="498" alt="Набор для путешествий">
+            <input type="radio" name="slider" id="slide-2" value="1">
+            <img class="slide" src="img/slide_2.jpg" width="140" height="149" alt="Набор для путешествий">
+            <input type="radio" name="slider" id="slide-3" value="1">
+            <img class="slide" src="img/slide_3.jpg" width="140" height="149" alt="Набор для путешествий">
+            <input type="radio" name="slider" id="slide-4" value="1">
+            <img class="slide" src="img/slide_4.jpg" width="140" height="149" alt="Набор для путешествий">
           </div>
-          <section class="item-contain">
-            <h3>В набор входят:</h3>
-            <ul class="item-list">
-              <li class="item-piece">Средство для умывания (50 мл)</li>
-              <li class="item-piece">Увлажняющий крем (50 мл)</li>
-              <li class="item-piece">Крем для бритья</li>
-              <li class="item-piece">Крем после бритья, шампунь (50 мл)</li>
-              <li class="item-piece">Удобная кожаная косметичка</li>
-            </ul>
-          </section>
+          <div class="controls">
+            <label for="slide-1"></label>
+            <label for="slide-2"></label>
+            <label for="slide-3"></label>
+            <label for="slide-4"></label>
+          </div>
+          <div class="description ">
+            <section class="item-description clearfix">
+              <span class="item-presence">Есть в наличии</span>
+              <span class="item-article">Артикул: Dexter AE</span>
+            </section>
+            <p class="text-description">Travel kit - <a href="#">необходимый аксессуар</a> во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем
+              для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
+            <div class="price price-item">
+              <b>2 900 руб.</b>
+              <a href="#" class="btn btn-item">Купить</a>
+            </div>
+            <section class="item-contain">
+              <h3>В набор входят:</h3>
+              <ul class="item-list">
+                <li class="item-piece">Средство для умывания (50 мл)</li>
+                <li class="item-piece">Увлажняющий крем (50 мл)</li>
+                <li class="item-piece">Крем для бритья</li>
+                <li class="item-piece">Крем после бритья, шампунь (50 мл)</li>
+                <li class="item-piece">Удобная кожаная косметичка</li>
+              </ul>
+            </section>
+          </div>
         </div>
       </div>
     </main>

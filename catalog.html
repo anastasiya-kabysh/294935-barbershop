@@ -9,30 +9,28 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <body>
-    <header class="main-header catalog">
+  <body class="inner-page">
+    <header class="main-header">
       <div class="container clearfix">
         <nav class="main-navigation">
+          <a class="logo-inner" href="index.html">
+            <img src="img/itemlogo.png" width="111" height="24" alt="Барбершоп «Бородинский»">
+          </a>
           <ul>
             <li>
-              <div class="catalog-logo">
-                <a><img src="img/cataloglogo.png" width="111" height="24" alt="Логотип Барбершоп"></a>
-              </div>
+              <a href="index.html">Информация</a>
             </li>
             <li>
-              <a href="#">Информация</a>
+              <a href="index.html">Новости</a>
             </li>
             <li>
-              <a href="#">Новости</a>
+              <a href="catalog-price.html">Прайс-лист</a>
+            </li>
+            <li class="active">
+              <span>Магазин</span>
             </li>
             <li>
-              <a href="#">Прайс-лист</a>
-            </li>
-            <li>
-              <a href="#" class="catalog-opened">Магазин</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
+              <a href="index.html">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -41,27 +39,25 @@
         </div>
       </div>
     </header>
-    <main class="catalog-main">
-      <div class="catalog-navigation">
-        <div class="container clearfix">
-          <h1>Средства для ухода</h1>
-          <ul class="catalog-nav">
-            <li><a href="#">Главная</a></li>
-            <li>
-              <a href="#">Магазин</a>
-            </li>
-            <li>
-              <a href="#" class="open-page">Средства для ухода</a>
-            </li>
-          </ul>
-        </div>
+    <main class="container clearfix">
+      <div class="inner-page-title">
+        <h1>Средства для ухода</h1>
+        <ul class="breadcrumbs">
+          <li><a href="index.html">Главная</a></li>
+          <li class="current">
+            <a href="catalog.html">Магазин</a>
+          </li>
+          <li class="current">
+            Средства для ухода
+          </li>
+        </ul>
       </div>
       <div class="container clearfix">
         <div class="catalog-left">
           <form class="form-groups" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form producers">
               <legend>
-                <h3 class="form-title">Производители</h3></legend>
+                Производители</legend>
               <ul class="catalog-filter filter-1">
                 <li><input type="checkbox" name="producer-1" id="baxter" checked>
                   <label for="baxter">Baxter of Сalifornia</label></li>
@@ -79,7 +75,7 @@
             </fieldset>
             <fieldset class="form groups-items">
               <legend>
-                <h3 class="form-title">Группы товаров</h3></legend>
+                Группы товаров</legend>
               <ul class="catalog-filter filter-2">
                 <li><input type="radio" name="group-1" id="group-1">
                   <label for="group-1">Бритвенные принадлежности</label></li>
@@ -100,7 +96,7 @@
             </div>
             <div class="price">
               <b> 2 900 руб.</b>
-              <a href="#" class="btn-price">Купить</a>
+              <a href="#" class="btn btn-price">Купить</a>
             </div>
           </div>
           <div class="items-and-prices clearfix">
@@ -110,7 +106,7 @@
             </div>
             <div class="price">
               <b>750 руб.</b>
-              <a href="#" class="btn-price">Купить</a>
+              <a href="#" class="btn btn-price">Купить</a>
             </div>
           </div>
           <div class="items-and-prices clearfix">
@@ -120,7 +116,7 @@
             </div>
             <div class="price">
               <b>290 руб.</b>
-              <a href="#" class="btn-price">Купить</a>
+              <a href="#" class="btn btn-price">Купить</a>
             </div>
           </div>
           <div class="items-and-prices clear">
@@ -130,7 +126,7 @@
             </div>
             <div class="price">
               <b>500 руб.</b>
-              <a href="#" class="btn-price">Купить</a>
+              <a href="#" class="btn btn-price">Купить</a>
             </div>
           </div>
           <div class="items-and-prices clearfix">
@@ -140,7 +136,7 @@
             </div>
             <div class="price">
               <b>300 руб.</b>
-              <a href="#" class="btn-price">Купить</a>
+              <a href="#" class="btn btn-price">Купить</a>
             </div>
           </div>
           <div class="items-and-prices clearfix">
@@ -150,7 +146,7 @@
             </div>
             <div class="price">
               <b>3900 руб.</b>
-              <a href="#" class="btn-price">Купить</a>
+              <a href="#" class="btn btn-price">Купить</a>
             </div>
           </div>
           <div class="pages">
